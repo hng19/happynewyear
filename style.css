@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+body{
+    height: 100vh;
+    width: 600px;
+    overflow: hidden;
+}
+
+.coin>p{
+    position: absolute;
+    top: -10%;
+    z-index: 2;
+    animation-name: coin-fall, coin-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+.coin1 {
+    left: 1%;
+}
+
+
+.coin2{
+    left: 10%;
+    animation-delay: 1s, 1s;
+}
+
+.coin3{
+    left: 20%;
+    animation-delay: 6s, 0.5s;
+}
+
+.coin4{
+    left: 30%;
+    animation-delay: 4s, 2s;
+}
+
+.coin5{
+    left: 40%;
+    animation-delay: 2s, 2s;
+}
+
+.coin6{
+    left: 50%;
+    animation-delay: 5s, 0.3s;
+}
+
+.coin7{
+    left: 60%;
+    animation-delay: 3s, 1s;
+}
+
+.coin8{
+    left: 70%;
+    animation-delay: 4s, 2s;
+}
+
+.coin9{
+    left: 80%;
+    animation-delay: 6s, 1s;
+}
+
+.coin10{
+    left: 90%;    
+    animation-delay: 3s, 1s;
+}
+
+@keyframes coin-fall{
+    0%{
+        top: -10%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+@keyframes coin-shake{
+    0%,100%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(800px);
+    }
+}
+
+.background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.background-image img {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1; 
+}
+
+.background-addition1 img, .background-addition2 img{
+    height: 400px;
+
+}
+
+.background-addition1 img {
+    position: absolute;
+    top: -25%;
+    left: -4%;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+
+.background-addition2 img {
+    position: absolute;
+    top: -25%;
+    right: -4%;
+    z-index: 1;
+}
+
+.background-addition3 img{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    bottom: -97px;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.line2{
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #fafafa, #ffee00 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.line1{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    z-index: 1;
+    font-family: 'Lobster Two', cursive;
+    color: rgb(255, 238, 2);
+}
+
+.line1 h2 span{
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    animation: animate 3s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40%,100% {
+        transform: translateY(0px);
+    }
+}
+
+.line2{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2em;
+    width: 400px;
+    position: absolute;
+    top: 120px;
+    left: 525px;
+    letter-spacing: 20px;
+    animation: year 2s ease-in infinite;
+}
+
+@keyframes year{
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    1000% {
+        transform: scale(1);
+    }
+}
+
+.line3,.line4{
+    font-family: 'Sedgwick Ave', cursive;
+    line-height: 90px;
+}
+
+.line3 img,.line4 img{
+    position: absolute;
+    left: 4%;
+    top: 20%;
+    height: 460px;
+}
+
+.line4 img{
+    right: -80%;
+}
+
+.banner{
+    position: absolute;
+    bottom: 14%;
+    left: 6%;
+}
+
+.banner,.banner2{
+    color: rgb(255, 238, 2);
+    animation: animate 2s ease-in-out infinite;
+}
+
+.banner2{
+    position: absolute;
+    right: 6%;
+    bottom: 14%;
+}
+
+.text{
+    width: 554px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 260px;
+    left: 400px;
+}
+
+.text img,.text span p{
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+}
+
+.text p{
+    width: 100px;
+}
+
+.text span p{
+    background: -webkit-linear-gradient(45deg, #ae0000, #fe0500 80%);
+    color: #fff;
+    font-family: 'Baloo Bhai 2', cursive;
+    position: absolute;
+    top: 0px;
+    z-index: -3;
+}
+
+.text1:hover p{
+    position: relative;
+    top: -150px;
+    z-index: 1;
+}
+
+.text2:hover p{
+    position: relative;
+    top: -150px;
+    z-index: 1;
+}
+
+.text3:hover p{
+    position: relative;
+    top: -150px;
+    z-index: 1;
+}
+
+.final{
+    z-index: -1;
+    color: #fff;
+    font-family: 'Baloo Bhai 2', cursive;
+    line-height: 100px;
+    position: absolute;
+    left: 30%;
+    top: 68%;
+    background: linear-gradient(45deg, #ad0200, transparent);
+}
+
+.final3{
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    color: aliceblue;
+}
